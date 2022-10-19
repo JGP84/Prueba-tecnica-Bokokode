@@ -11,13 +11,14 @@ export const Logo = styled.img`
   /* width: 54px;
   height: 54px; */
   /* margin-left: 79px; */
+  margin-left: 80px;
   height: 100%;
 `;
 
 export const Wrapper = styled.div`
 /* position: relative; */
 
-  padding: 37px 68px 33px 0px;
+  padding: 37px 80px 33px 0px;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -33,7 +34,7 @@ export const IconCart = styled.img`
 `;
 export const BadgeCart = styled.div`
  /* top: 60px; */
- margin-top: 23px;
+ margin-top: 10px;
   width: 21px;
   height: 20.57px;
   text-align: center;

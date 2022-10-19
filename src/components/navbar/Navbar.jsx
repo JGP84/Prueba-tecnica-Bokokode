@@ -14,9 +14,9 @@ const Navbar = () => {
       <Container>
       <Logo src="/images/logo.png"></Logo>
         <Wrapper>
-          {/* <BadgeCart>
+          <BadgeCart>
         <NumberBadget>1</NumberBadget>
-      </BadgeCart> */}
+      </BadgeCart>
           <IconCart src="/images/icons/cart-icon.png"></IconCart>
         </Wrapper>
       </Container>
