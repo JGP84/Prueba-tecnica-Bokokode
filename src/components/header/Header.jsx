@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid } from './styleHeader'
 import { TitleHeader, Button, ImgFeaturedProduct, ContainerTitlePhotoDay, Title } from './styleHeader'
 
+
 const Header = () => {
   return (
     <>
