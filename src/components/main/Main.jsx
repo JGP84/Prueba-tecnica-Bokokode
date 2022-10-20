@@ -74,8 +74,8 @@ const Main = () => {
 
           <CardProduct>
 
-            <ImgProduct src="/images/photo-card-example.png" alt="product" />
-            
+            <ImgProduct src="/images/landmarks.png" alt="product" />
+
             <ButtonCart>add to cart</ButtonCart>
 
             <WrapperText>
@@ -87,7 +87,7 @@ const Main = () => {
           </CardProduct>
 
           <CardProduct>
-            <ImgProduct src="/images/photo-card-example.png" alt="product" />
+            <ImgProduct src="/images/landmarks.png" alt="product" />
             <ButtonCart>add to cart</ButtonCart>
             <WrapperText>
               <TextCategory>people</TextCategory>
@@ -96,7 +96,7 @@ const Main = () => {
             </WrapperText>
           </CardProduct>
           <CardProduct>
-            <ImgProduct src="/images/photo-card-example.png" alt="product" />
+            <ImgProduct src="/images/landmarks.png" alt="product" />
             <ButtonCart>add to cart</ButtonCart>
             <WrapperText>
               <TextCategory>people</TextCategory>
@@ -109,7 +109,7 @@ const Main = () => {
               <TextBestSeller>best seller</TextBestSeller>
             </WrapperBestSeller>
             <ImgProduct
-              src="/images/photo-card-example.png"
+              src="/images/landmarks.png"
               alt="product"
             ></ImgProduct>
             <ButtonCart>add to cart</ButtonCart>
@@ -120,7 +120,7 @@ const Main = () => {
             </WrapperText>
           </CardProduct>
           <CardProduct>
-            <ImgProduct src="/images/photo-card-example.png" alt="product" />
+            <ImgProduct src="/images/landmarks.png" alt="product" />
             <ButtonCart>add to cart</ButtonCart>
             <WrapperText>
               <TextCategory>people</TextCategory>
@@ -129,7 +129,7 @@ const Main = () => {
             </WrapperText>
           </CardProduct>
           <CardProduct>
-            <ImgProduct src="/images/photo-card-example.png" alt="product" />
+            <ImgProduct src="/images/landmarks.png" alt="product" />
             <ButtonCart>add to cart</ButtonCart>
             <WrapperText>
               <TextCategory>people</TextCategory>

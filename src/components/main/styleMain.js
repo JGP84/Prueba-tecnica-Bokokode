@@ -82,7 +82,8 @@ export const GridProducts = styled.div`
 
   ${responsive.mobile}{
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
+    /* grid-template-rows: repeat(6, auto); */
+    grid-auto-rows: 2500px;
     row-gap: 40px;
   }
 `;
@@ -118,19 +119,26 @@ export const ButtonCart = styled.button`
   text-align: center;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-
   color: #ffffff;
+
+  ${responsive.mobile}{
+   
+    width: 100%;
+    font-size: 70px;
+    height: 190px;
+  
+  }
 `;
 
 export const ImgProduct = styled.img`
   width: 283.02px;
   height: 352.72px;
-  object-fit: cover;
+  /* object-fit: cover; */
 
   ${responsive.mobile}{
-    width: 100%;
-  height: 80%;
-  object-fit: cover;
+    width: 1250px;
+    height: auto;
+  
   }
 `;
 export const WrapperText = styled.div`
@@ -143,6 +151,12 @@ export const WrapperText = styled.div`
   align-items: flex-start;
   gap: 8px;
 
+  ${responsive.mobile} {
+    font-size: 200%;
+    width: auto;
+    gap: 40px;
+  }
+
   /* background: red; */
 `;
 export const TextCategory = styled.text`
@@ -150,12 +164,14 @@ export const TextCategory = styled.text`
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
-  line-height: 24px;
+ 
   margin-top: 8px;
   text-transform: capitalize;
-  /* identical to box height */
-
   color: #656565;
+
+  ${responsive.mobile} {
+    font-size: 120%;
+  }
 `;
 
 export const TextProduct = styled.text`
@@ -163,21 +179,25 @@ export const TextProduct = styled.text`
   font-style: normal;
   font-weight: 700;
   font-size: 34px;
-  line-height: 37px;
-  text-transform: capitalize;
-  /* identical to box height */
 
+  text-transform: capitalize;
   color: #000000;
+
+  ${responsive.mobile} {
+    font-size: 150%;
+  }
 `;
 export const TextPrice = styled.text`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
   font-size: 29px;
-  line-height: 32px;
-  /* identical to box height */
 
   color: #656565;
+
+  ${responsive.mobile} {
+    font-size: 150%;
+  }
 `;
 export const WrapperBestSeller = styled.div`
   position: absolute;
