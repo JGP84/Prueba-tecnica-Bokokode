@@ -20,6 +20,8 @@ const Navbar = () => {
           <IconCart src="/images/icons/cart-icon.png"></IconCart>
         </Wrapper>
       </Container>
+
+      
     </>
   );
 };

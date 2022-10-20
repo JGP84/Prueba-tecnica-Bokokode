@@ -7,27 +7,20 @@ export const Grid = styled.div`
   width: 1290px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  /* background: blue; */
   margin: 0 auto;
 
   ${responsive.mobile} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     row-gap: 90px;
-    /* grid-template-rows: repeat(11, auto);
-    row-gap: 20px;
-    margin: 0px auto; */
   }
 `;
 
 export const TitleHeader = styled.text`
-  /* font-family: "Archivo"; */
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
-
   text-transform: capitalize;
-
   color: #000000;
   margin-left: 10px;
   margin-bottom: 4px;
@@ -45,7 +38,6 @@ export const Button = styled.button`
   height: 47px;
   padding: 9.5px 39px 5.5px 39px;
   margin-bottom: 27px;
-  /* margin: 58px 0px 27px 0px; */
   font-family: "Archivo";
   font-style: normal;
   font-weight: 500;
@@ -60,7 +52,6 @@ export const Button = styled.button`
   ${responsive.mobile} {
     grid-row: 3 / 4;
     width: 100%;
-    /* margin: 5px 0 0 0; */
     font-size: 70px;
     height: 190px;
   }
@@ -68,14 +59,12 @@ export const Button = styled.button`
 
 export const ImgFeaturedProduct = styled.img`
   grid-column: 1 / span 2;
-  /*  grid-row: 1 / 2; */
 
   ${responsive.mobile} {
     grid-row: 2 / 3;
     margin-top: 40px;
     width: 100%;
     height: 850px;
-
   }
 `;
 
@@ -85,7 +74,6 @@ export const ContainerTitlePhotoDay = styled.div`
   height: 67px;
   left: 74px;
   top: 688px;
-  /* bottom: 0px; */
   background: #ffffff;
   display: flex;
   justify-content: center;
@@ -93,20 +81,187 @@ export const ContainerTitlePhotoDay = styled.div`
 
   ${responsive.mobile} {
     position: absolute;
-  width: 850px;
-  height: 200px;
-  left: 74px;
-  top: 1350px;
+    width: 850px;
+    height: 200px;
+    left: 74px;
+    top: 1350px;
   }
 `;
+
+export const WrapperDescriptionFeatured = styled.div`
+  max-width: 690px;
+  display: flex;
+  flex-direction: column;
+
+  ${responsive.mobile} {
+    max-width: 100%;
+  }
+`;
+
 export const Title = styled.text`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
+  width: 100%auto;
+
+  ${responsive.mobile} {
+    font-size: 70px;
+    margin-top: 50px;
+    margin-bottom: 120px;
+  }
+`;
+
+export const TitlePeople = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  text-align: right;
+
+  ${responsive.mobile} {
+    font-size: 70px;
+    text-align: Left;
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+`;
+
+export const SubTitle = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: #656565;
+
+  ${responsive.mobile} {
+    display: none;
+  }
+`;
+export const TextDescription = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #656565;
 
   ${responsive.mobile} {
     font-size: 60px;
+  }
+`;
+export const TextDescriptionFooter = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #656565;
+  margin-top: 40px;
+
+  ${responsive.mobile} {
+    display: none;
+  }
+`;
+
+export const ContainerFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin-left: 92px;
+  margin-top: 42px;
+  margin-bottom: 75px;
+
+  ${responsive.mobile} {
+    flex-direction: column;
+    /* margin: 0 auto; */
+  }
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+export const Row = styled.div`
+  display: flex;
+  margin-top: 34px;
+  margin-bottom: 54px;
+
+  ${responsive.mobile} {
+    gap: 40px;
+  }
+`;
+export const CardProduct = styled.div`
+  width: 117px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+
+  ${responsive.mobile} {
+    width: 100%;
+    margin: 0;
+  }
+`;
+export const Img = styled.img`
+  width: 117px;
+  height: 147px;
+
+  ${responsive.mobile} {
+    width: 90%;
+    height: 90%;
+  }
+`;
+export const WrapperText = styled.div`
+  width: 283.02px;
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-space-evenly;
+  align-items: flex-start;
+  gap: 8px;
+
+  ${responsive.mobile} {
+  }
+`;
+export const TextCategory = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 14px;
+  text-transform: capitalize;
+  color: #656565;
+
+  ${responsive.mobile} {
+    font-size: 300%;
+  }
+`;
+
+export const TextProduct = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #000000;
+
+  ${responsive.mobile} {
+    font-size: 300%;
+  }
+`;
+export const TextPrice = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #656565;
+
+  ${responsive.mobile} {
+    font-size: 300%;
   }
 `;
