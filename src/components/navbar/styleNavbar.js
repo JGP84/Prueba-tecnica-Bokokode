@@ -77,3 +77,4 @@ export const NumberBadget = styled.text`
     font-size: 40px;
   }
 `;
+

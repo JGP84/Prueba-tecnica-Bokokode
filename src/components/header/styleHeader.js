@@ -15,6 +15,9 @@ export const Grid = styled.div`
     row-gap: 90px;
   }
 `;
+export const WrapperSection = styled.div`
+ margin-top: 58px;
+`;
 
 export const TitleHeader = styled.text`
   font-style: normal;
@@ -73,18 +76,19 @@ export const ContainerTitlePhotoDay = styled.div`
   width: 271.95px;
   height: 67px;
   left: 74px;
-  top: 688px;
+  top: 748px;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
 
   ${responsive.mobile} {
+  
     position: absolute;
     width: 850px;
     height: 200px;
     left: 74px;
-    top: 1350px;
+    top: 1440px;
   }
 `;
 

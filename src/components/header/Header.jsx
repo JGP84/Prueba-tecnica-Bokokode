@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "./styleHeader";
 import {
+  WrapperSection,
   TitleHeader,
   Button,
   ImgFeaturedProduct,
@@ -14,7 +15,8 @@ import {
   WrapperDescriptionFeatured,
   Column,
   Row,
-  Img, CardProduct,
+  Img,
+  CardProduct,
   WrapperText,
   TextCategory,
   TextProduct,
@@ -23,8 +25,8 @@ import {
 
 const Header = () => {
   return (
-    <>
-    {/* Start Grid */}
+    <WrapperSection>
+      {/* Start Grid */}
       <Grid>
         <TitleHeader>samurai king resting</TitleHeader>
         <Button>add to cart</Button>
@@ -34,7 +36,7 @@ const Header = () => {
         <Title sytle={{ fontSize: "20px" }}>Photo of the day</Title>
       </ContainerTitlePhotoDay>
 
-    {/* End grid */}
+      {/* End grid */}
 
       <ContainerFlex>
         <WrapperDescriptionFeatured>
@@ -59,7 +61,6 @@ const Header = () => {
           <TitlePeople>People also buy</TitlePeople>
 
           <Row>
-
             <CardProduct>
               <Img src="/images/yellow-wall.png" />
               <WrapperText>
@@ -86,14 +87,10 @@ const Header = () => {
                 <TextPrice>&#36;3.89</TextPrice>
               </WrapperText>
             </CardProduct>
-
           </Row>
-
         </Column>
-
-
       </ContainerFlex>
-    </>
+    </WrapperSection>
   );
 };
 

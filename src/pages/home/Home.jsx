@@ -11,7 +11,8 @@ const Home = () => {
         <Navbar />
         <Line />
         <Header />
-        {/* <Main /> */}
+        <Line />
+        <Main />
       </Container>
     </>
   );
