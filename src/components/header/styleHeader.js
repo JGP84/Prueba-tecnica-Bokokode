@@ -36,6 +36,7 @@ export const TitleHeader = styled.text`
     grid-row: 1 / 2;
     font-weight: 700;
     font-size: 110px;
+    margin-top: 100px;
   }
 `;
 
@@ -71,6 +72,10 @@ export const ImgFeaturedProduct = styled.img`
 
   ${responsive.mobile} {
     grid-row: 2 / 3;
+    margin-top: 40px;
+    width: 100%;
+    height: 850px;
+
   }
 `;
 
@@ -85,6 +90,14 @@ export const ContainerTitlePhotoDay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${responsive.mobile} {
+    position: absolute;
+  width: 850px;
+  height: 200px;
+  left: 74px;
+  top: 1350px;
+  }
 `;
 export const Title = styled.text`
   font-family: "Archivo";
@@ -92,4 +105,8 @@ export const Title = styled.text`
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
+
+  ${responsive.mobile} {
+    font-size: 60px;
+  }
 `;

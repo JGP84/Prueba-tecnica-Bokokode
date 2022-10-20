@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { responsive } from "../../responsive";
 
 export const Container = styled.div`
   position: relative;
@@ -13,4 +14,9 @@ export const Line = styled.hr`
   margin: 0 auto;
   width: 1281px;
   border: 2px solid #e4e4e4;
+
+  ${responsive.mobile} {
+    border: 8px solid #e4e4e4;
+    width: 100%;
+  }
 `;
