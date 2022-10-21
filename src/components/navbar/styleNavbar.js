@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   height: 100%;
+  margin-left: 83px;
   margin-top: 20px;
 
   ${responsive.mobile} {
