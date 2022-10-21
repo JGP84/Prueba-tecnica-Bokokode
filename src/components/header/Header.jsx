@@ -22,13 +22,34 @@ import {
   TextProduct,
   TextPrice,
 } from "./styleHeader";
+import useFetch from "../../hooks/useFetch";
 
 const Header = () => {
+
+  const { featuredProduct,  data, dataFilter, loading, error, reFetch, getFeaturedProduct } = useFetch()
+
+  let product;
+
+  if ( data ) { 
+    console.log('getFeaturedProduct', getFeaturedProduct())
+    product = getFeaturedProduct()[0]
+    console.log('product.name', product.name)
+  }
+
+  
+
+
+
   return (
+    <>
+    { loading ? 
+    <h1>Loading...</h1> 
+    : 
+    <>
     <WrapperSection>
       {/* Start Grid */}
       <Grid>
-        <TitleHeader>samurai king resting</TitleHeader>
+        <TitleHeader>{ product.name }</TitleHeader>
         <Button>add to cart</Button>
         <ImgFeaturedProduct src="/images/featured-product.png" />
       </Grid>
@@ -91,6 +112,13 @@ const Header = () => {
         </Column>
       </ContainerFlex>
     </WrapperSection>
+
+    </>
+    
+    }
+   
+
+    </>
   );
 };
 
