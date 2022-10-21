@@ -6,8 +6,8 @@ export const WrapperHeader = styled.div`
   justify-content: space-between;
   max-width: 1266px;
   margin-left: 97px;
-  margin-top: 68px;
-  margin-bottom: 59px;
+  margin-top: 220px;
+  margin-bottom: 120px;
 `;
 export const WrapperTitleCategory = styled.div``;
 
@@ -110,7 +110,7 @@ export const ButtonCart = styled.button`
    
     width: 100%;
     font-size: 70px;
-    height: 190px;
+    height: 166px;
   
   }
 `;
@@ -149,12 +149,13 @@ export const TextCategory = styled.text`
   font-weight: 700;
   font-size: 22px;
  
-  margin-top: 8px;
+  margin-top: 62px;
+  margin-bottom: 36px;
   text-transform: capitalize;
   color: #656565;
 
   ${responsive.mobile} {
-    font-size: 120%;
+    font-size: 75px;
   }
 `;
 
@@ -168,7 +169,8 @@ export const TextProduct = styled.text`
   color: #000000;
 
   ${responsive.mobile} {
-    font-size: 150%;
+    font-size: 110px;
+    margin-bottom: 40px;
   }
 `;
 export const TextPrice = styled.text`
@@ -181,6 +183,7 @@ export const TextPrice = styled.text`
 
   ${responsive.mobile} {
     font-size: 150%;
+    margin-bottom: 90px;
   }
 `;
 export const WrapperBestSeller = styled.div`

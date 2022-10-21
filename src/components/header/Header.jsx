@@ -6,7 +6,8 @@ import {
   Button,
   ImgFeaturedProduct,
   ContainerTitlePhotoDay,
-  Title,
+  TitlePhoto,
+  TitleDescription,
   TitlePeople,
   SubTitle,
   TextDescription,
@@ -58,14 +59,14 @@ const Header = () => {
         alt={ productFeatured.image.alt } />
       </Grid>
       <ContainerTitlePhotoDay>
-        <Title sytle={{ fontSize: "20px" }}>Photo of the day</Title>
+        <TitlePhoto>Photo of the day</TitlePhoto>
       </ContainerTitlePhotoDay>
 
       {/* End grid */}
 
       <ContainerFlex>
         <WrapperDescriptionFeatured>
-          <Title>{`About the ${ productFeatured.name }` }</Title>
+          <TitleDescription>{`About the ${ productFeatured.name }` }</TitleDescription>
           <SubTitle>{ productFeatured.category }</SubTitle>
           <TextDescription>
           { productFeatured.description }

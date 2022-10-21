@@ -104,8 +104,25 @@ export const WrapperDescriptionFeatured = styled.div`
     margin-top: 60px;
   }
 `;
+export const TitlePhoto = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  
+  width: 100%auto;
 
-export const Title = styled.text`
+  ${responsive.mobile} {
+    font-size: 55px;
+    margin-top: 50px;
+    margin-bottom: 120px;
+    /* display: flex; */
+    align-self: center;
+    align-content: center;
+  }
+`;
+
+export const TitleDescription = styled.text`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -114,7 +131,7 @@ export const Title = styled.text`
   width: 100%auto;
 
   ${responsive.mobile} {
-    font-size: 55px;
+    font-size: 75px;
     margin-top: 50px;
     margin-bottom: 120px;
     /* display: flex; */
@@ -134,8 +151,8 @@ export const TitlePeople = styled.text`
   ${responsive.mobile} {
     font-size: 70px;
     text-align: Left;
-    margin-top: 100px;
-    margin-bottom: 120px;
+    margin-top: 140px;
+    margin-bottom: 180px;
   }
 `;
 
@@ -190,6 +207,7 @@ export const ContainerFlex = styled.div`
   ${responsive.mobile} {
     flex-direction: column;
     margin: 0 auto;
+    
   }
 `;
 
@@ -213,11 +231,14 @@ export const CardProduct = styled.div`
   flex-direction: column;
   margin-left: 35px;
   object-fit: contain;
+  
 
   ${responsive.mobile} {
     width: 400px;
     margin-left: 0;
-    margin-bottom: 400px;
+    margin-bottom: 280px;
+    align-items: flex-start;
+    
   }
 `;
 export const Img = styled.img`
@@ -229,6 +250,7 @@ export const Img = styled.img`
     
     height: 460px;
     object-fit: contain;
+    margin-bottom: 28px;
   }
 `;
 export const WrapperText = styled.div`
@@ -238,7 +260,7 @@ export const WrapperText = styled.div`
   flex-direction: column;
   justify-content: space-space-evenly;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
   
 
   ${responsive.mobile} {
@@ -254,7 +276,7 @@ export const TextCategory = styled.text`
   color: #656565;
 
   ${responsive.mobile} {
-    font-size: 300%;
+    font-size: 45px;
   }
 `;
 
@@ -267,7 +289,7 @@ export const TextProduct = styled.text`
   color: #000000;
 
   ${responsive.mobile} {
-    font-size: 300%;
+    font-size: 57px;
   }
 `;
 export const TextPrice = styled.text`
@@ -278,6 +300,6 @@ export const TextPrice = styled.text`
   color: #656565;
 
   ${responsive.mobile} {
-    font-size: 300%;
+    font-size: 54px;
   }
 `;
