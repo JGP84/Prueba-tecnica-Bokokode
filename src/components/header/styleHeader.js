@@ -16,7 +16,7 @@ export const Grid = styled.div`
   }
 `;
 export const WrapperSection = styled.div`
- margin-top: 58px;
+ margin-top: 15px;
 `;
 
 export const TitleHeader = styled.text`
@@ -55,19 +55,21 @@ export const Button = styled.button`
   ${responsive.mobile} {
     grid-row: 3 / 4;
     width: 100%;
-    font-size: 70px;
-    height: 190px;
+    font-size: 74px;
+    height: 210px;
   }
 `;
 
 export const ImgFeaturedProduct = styled.img`
   grid-column: 1 / span 2;
+ /*  object-fit: cover ; */
+ object-fit: cover ; 
 
   ${responsive.mobile} {
     grid-row: 2 / 3;
     margin-top: 40px;
     width: 100%;
-    height: 850px;
+    height: 840px;
   }
 `;
 
@@ -88,7 +90,7 @@ export const ContainerTitlePhotoDay = styled.div`
     width: 850px;
     height: 200px;
     left: 74px;
-    top: 1440px;
+    top: 1600px;
   }
 `;
 
@@ -99,6 +101,7 @@ export const WrapperDescriptionFeatured = styled.div`
 
   ${responsive.mobile} {
     max-width: 100%;
+    margin-top: 60px;
   }
 `;
 
@@ -107,13 +110,16 @@ export const Title = styled.text`
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
-  line-height: 24px;
+  
   width: 100%auto;
 
   ${responsive.mobile} {
-    font-size: 70px;
+    font-size: 55px;
     margin-top: 50px;
     margin-bottom: 120px;
+    /* display: flex; */
+    align-self: center;
+    align-content: center;
   }
 `;
 
@@ -183,7 +189,7 @@ export const ContainerFlex = styled.div`
 
   ${responsive.mobile} {
     flex-direction: column;
-    /* margin: 0 auto; */
+    margin: 0 auto;
   }
 `;
 
@@ -202,22 +208,27 @@ export const Row = styled.div`
 `;
 export const CardProduct = styled.div`
   width: 117px;
+  /* height: ; */
   display: flex;
   flex-direction: column;
   margin-left: 35px;
+  object-fit: contain;
 
   ${responsive.mobile} {
-    width: 100%;
-    margin: 0;
+    width: 400px;
+    margin-left: 0;
+    margin-bottom: 400px;
   }
 `;
 export const Img = styled.img`
-  width: 117px;
+ 
   height: 147px;
+  
 
   ${responsive.mobile} {
-    width: 90%;
-    height: 90%;
+    
+    height: 460px;
+    object-fit: contain;
   }
 `;
 export const WrapperText = styled.div`

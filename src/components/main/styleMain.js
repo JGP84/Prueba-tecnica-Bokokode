@@ -66,45 +66,30 @@ export const WrapperCheckbox = styled.div`
 
 export const GridProducts = styled.div`
   display: grid;
-  /* gap: 1rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
-  /* grid-auto-rows: 514px;
-  grid-template-columns: repeat(auto-fill, minmax(283.02px, 1fr)); */
   grid-template-columns: repeat(3, 283.02px);
- /*  grid-template-columns: repeat(auto-fill, minmax( 1fr, 283.02px)); */
-  /* grid-template-columns: repeat(auto-fill, minmax( 200px, auto)); */
- /*  grid-template-columns: repeat(auto-fill, minmax( 200px, 1fr)); */
-  /* grid-template-rows: repeat(2, 514px);  */
   grid-auto-rows: auto;
   column-gap: 48px;
   row-gap: 52.55px;
 
   ${responsive.mobile}{
     grid-template-columns: 1fr;
-    /* grid-template-rows: repeat(6, auto); */
-    grid-auto-rows: 2500px;
-    row-gap: 40px;
+    
   }
 `;
 
 export const CardProduct = styled.div`
   width: 283.02px;
   height: auto;
-  /* background-color: green; */
   color: white;
   font-size: 32px;
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   align-items: flex-center;
 
   ${responsive.mobile}{
-   /*  width: 362px;
-  height: 661px; */
+ 
   width: 100%;
-  /* height: 150%; */
-
+  
   }
 `;
 export const ButtonCart = styled.button`
@@ -131,13 +116,12 @@ export const ButtonCart = styled.button`
 `;
 
 export const ImgProduct = styled.img`
-  width: 283.02px;
   height: 352.72px;
-  /* object-fit: cover; */
 
   ${responsive.mobile}{
-    width: 1250px;
-    height: auto;
+   
+    height: 1550px;
+    object-fit: cover;
   
   }
 `;
