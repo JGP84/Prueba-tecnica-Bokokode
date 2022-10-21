@@ -5,7 +5,7 @@ function useFetch(url) {
   const [data, setData] = useState(null);
   const [featuredProduct, setFeaturedProduct] = useState(null);
   const [dataFilter, setDataFilter] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   /* let dataBody = JSON.stringify({
@@ -40,7 +40,7 @@ function useFetch(url) {
   };
 
   useEffect(() => {
-    setLoading(true);
+    
 
     /* Data */
     axios(config)
@@ -68,7 +68,7 @@ function useFetch(url) {
   }, [url]);
 
   const reFetch = () => {
-    setLoading(true);
+    
 
     axios(config)
       .then((response) => {

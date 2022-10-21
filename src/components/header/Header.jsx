@@ -28,12 +28,12 @@ const Header = () => {
 
   const { featuredProduct,  data, dataFilter, loading, error, reFetch, getFeaturedProduct } = useFetch()
 
-  let product;
+  let productFeatured;
 
   if ( data ) { 
-    console.log('getFeaturedProduct', getFeaturedProduct())
-    product = getFeaturedProduct()[0]
-    console.log('product.name', product.name)
+   
+    productFeatured = getFeaturedProduct()[0]
+    console.log('product.name', productFeatured)
   }
 
   
@@ -43,15 +43,16 @@ const Header = () => {
   return (
     <>
     { loading ? 
-    <h1>Loading...</h1> 
-    : 
-    <>
+
+    <h1>Loading...</h1> :
+
     <WrapperSection>
       {/* Start Grid */}
       <Grid>
-        <TitleHeader>{ product.name }</TitleHeader>
+        <TitleHeader> { productFeatured.name }</TitleHeader>
         <Button>add to cart</Button>
-        <ImgFeaturedProduct src="/images/featured-product.png" />
+        <ImgFeaturedProduct src={ productFeatured.image.src }
+        alt={ productFeatured.image.alt } />
       </Grid>
       <ContainerTitlePhotoDay>
         <Title sytle={{ fontSize: "20px" }}>Photo of the day</Title>
@@ -61,16 +62,10 @@ const Header = () => {
 
       <ContainerFlex>
         <WrapperDescriptionFeatured>
-          <Title>About the Samurai King Resting</Title>
-          <SubTitle>Pets</SubTitle>
+          <Title>{`About the ${ productFeatured.name }` }</Title>
+          <SubTitle>{ productFeatured.category }</SubTitle>
           <TextDescription>
-            So how did the classical Latin become so incoherent? According to
-            McClintock, a 15th century typesetter likely scrambled part of
-            Cicero's De Finibus in order to provide placeholder text to mockup
-            various fonts for a type specimen book.So how did the classical
-            Latin become so incoherent? According to McClintock, a 15th century
-            typesetter likely scrambled part of Cicero's De Finibus in order to
-            provide placeholder
+          { productFeatured.description }
           </TextDescription>
           <TextDescriptionFooter>
             text to mockup various fonts for a type specimen book.So how did the
@@ -83,11 +78,11 @@ const Header = () => {
 
           <Row>
             <CardProduct>
-              <Img src="/images/yellow-wall.png" />
+              <Img src={ productFeatured.people_also_buy[0].image.src} />
               <WrapperText>
-                <TextCategory>people</TextCategory>
-                <TextProduct>red bench</TextProduct>
-                <TextPrice>&#36;3.89</TextPrice>
+                <TextCategory>{ productFeatured.people_also_buy[0].category}</TextCategory>
+                <TextProduct>{ productFeatured.people_also_buy[0].name}</TextProduct>
+                <TextPrice>&#36;{ productFeatured.people_also_buy[0].price}</TextPrice>
               </WrapperText>
             </CardProduct>
 
@@ -112,11 +107,9 @@ const Header = () => {
         </Column>
       </ContainerFlex>
     </WrapperSection>
-
-    </>
-    
     }
-   
+
+    
 
     </>
   );
