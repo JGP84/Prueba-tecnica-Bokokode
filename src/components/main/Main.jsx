@@ -41,7 +41,7 @@ const Main = () => {
         <>
           <WrapperHeader>
             <WrapperTitleCategory>
-              <TitleCategory>Photography /</TitleCategory>
+              <TitleCategory>Photography&nbsp;&nbsp; /&nbsp; </TitleCategory>
               <TitleCategory style={{ color: "#9B9B9B", fontWeight: "400" }}>
                 Premium Photos
               </TitleCategory>
@@ -92,7 +92,7 @@ const Main = () => {
                       alt={product.image.alt}
                     />
 
-                    <ButtonCart>add to cart</ButtonCart>
+                   {/*  <ButtonCart>add to cart</ButtonCart> */}
 
                     <WrapperText>
                       <TextCategory>{product.category}</TextCategory>

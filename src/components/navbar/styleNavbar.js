@@ -18,10 +18,12 @@ export const Logo = styled.img`
   /* margin-left: 79px; */
   margin-left: 80px;
   height: 100%;
+  margin-top: 20px;
 
   ${responsive.mobile} {
     width: 30%;
   height: 30%;
+  margin-top: 0px;
   }
 `;
 

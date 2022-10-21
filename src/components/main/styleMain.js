@@ -6,8 +6,14 @@ export const WrapperHeader = styled.div`
   justify-content: space-between;
   max-width: 1266px;
   margin-left: 97px;
-  margin-top: 220px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  ${responsive.mobile}{
+    margin-top: 220px;
   margin-bottom: 120px;
+  }
+
 `;
 export const WrapperTitleCategory = styled.div``;
 
@@ -116,7 +122,8 @@ export const ButtonCart = styled.button`
 `;
 
 export const ImgProduct = styled.img`
-  height: 352.72px;
+  height: 400px;
+  
 
   ${responsive.mobile}{
    
@@ -148,14 +155,14 @@ export const TextCategory = styled.text`
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
- 
-  margin-top: 62px;
-  margin-bottom: 36px;
+  margin-top: 16px;
   text-transform: capitalize;
   color: #656565;
 
   ${responsive.mobile} {
     font-size: 75px;
+    margin-top: 62px;
+  margin-bottom: 36px;
   }
 `;
 
@@ -163,7 +170,7 @@ export const TextProduct = styled.text`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 33px;
 
   text-transform: capitalize;
   color: #000000;

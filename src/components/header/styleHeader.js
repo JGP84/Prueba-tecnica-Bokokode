@@ -16,7 +16,11 @@ export const Grid = styled.div`
   }
 `;
 export const WrapperSection = styled.div`
- margin-top: 15px;
+ margin-top: 55px;
+
+ ${responsive.mobile} {
+  margin-top: 15px;
+ }
 `;
 
 export const TitleHeader = styled.text`
@@ -165,6 +169,7 @@ export const SubTitle = styled.text`
   margin-top: 16px;
   margin-bottom: 16px;
   color: #656565;
+  text-transform: capitalize;
 
   ${responsive.mobile} {
     display: none;
