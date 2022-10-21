@@ -20,30 +20,43 @@ import {
   TextBestSeller,
 } from "./styleMain";
 import Checkbox from "./Checkbox";
+import useFetch from "../../hooks/useFetch";
 
 const Main = () => {
   const [value, setCheckbox] = useState(true);
 
+  const { dataFilter, loading } = useFetch();
+
+  let products;
+
+  if (dataFilter) {
+    products = dataFilter.data.data;
+  }
+
   return (
     <>
-      <WrapperHeader>
-        <WrapperTitleCategory>
-          <TitleCategory>Photography /</TitleCategory>
-          <TitleCategory style={{ color: "#9B9B9B", fontWeight: "400" }}>
-            Premium Photos
-          </TitleCategory>
-        </WrapperTitleCategory>
-        <WrapperSortProducts>
-          <TitleSorts>Price</TitleSorts>
-        </WrapperSortProducts>
-      </WrapperHeader>
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <>
+          <WrapperHeader>
+            <WrapperTitleCategory>
+              <TitleCategory>Photography /</TitleCategory>
+              <TitleCategory style={{ color: "#9B9B9B", fontWeight: "400" }}>
+                Premium Photos
+              </TitleCategory>
+            </WrapperTitleCategory>
+            <WrapperSortProducts>
+              <TitleSorts>Price</TitleSorts>
+            </WrapperSortProducts>
+          </WrapperHeader>
 
-      <Row>
-        <ColumnCheckboxes>
-          {/* <Checkbox>
+          <Row>
+            <ColumnCheckboxes>
+              {/* <Checkbox>
             
           </Checkbox> */}
-          {/* <WrapperCheckbox>
+              {/* <WrapperCheckbox>
             <input
               type="checkbox"
               id="coding"
@@ -52,94 +65,47 @@ const Main = () => {
               checked
             ></input>
           </WrapperCheckbox> */}
-          <WrapperCheckbox>
-            <Checkbox
-              label="value"
-              value={value}
-              checked={value}
-              onChange={({ target }) => setCheckbox(!value)}
-            />
-          </WrapperCheckbox>
+              <WrapperCheckbox>
+                <Checkbox
+                  label="value"
+                  value={value}
+                  checked={value}
+                  onChange={({ target }) => setCheckbox(!value)}
+                />
+              </WrapperCheckbox>
 
-          {/*  <Checkbox
+              {/*  <Checkbox
               label="value"
               value={value}
               checked={value}
               onChange={({ target }) => setCheckbox(!value)}
             /> */}
-          {/* <Checkbox>1</Checkbox> */}
-        </ColumnCheckboxes>
+              {/* <Checkbox>1</Checkbox> */}
+            </ColumnCheckboxes>
 
-        <GridProducts>
+            <GridProducts>
+              {products.map((product) => {
+                return (
+                  <CardProduct>
+                    <ImgProduct
+                      src={product.image.src}
+                      alt={product.image.alt}
+                    />
 
-          <CardProduct>
+                    <ButtonCart>add to cart</ButtonCart>
 
-            <ImgProduct src="/images/landmarks.png" alt="product" />
-
-            <ButtonCart>add to cart</ButtonCart>
-
-            <WrapperText>
-              <TextCategory>people</TextCategory>
-              <TextProduct>red bench</TextProduct>
-              <TextPrice>&#36;3.89</TextPrice>
-            </WrapperText>
-
-          </CardProduct>
-
-          <CardProduct>
-            <ImgProduct src="/images/landmarks.png" alt="product" />
-            <ButtonCart>add to cart</ButtonCart>
-            <WrapperText>
-              <TextCategory>people</TextCategory>
-              <TextProduct>red bench</TextProduct>
-              <TextPrice>&#36;3.89</TextPrice>
-            </WrapperText>
-          </CardProduct>
-          <CardProduct>
-            <ImgProduct src="/images/landmarks.png" alt="product" />
-            <ButtonCart>add to cart</ButtonCart>
-            <WrapperText>
-              <TextCategory>people</TextCategory>
-              <TextProduct>red bench</TextProduct>
-              <TextPrice>&#36;3.89</TextPrice>
-            </WrapperText>
-          </CardProduct>
-          <CardProduct>
-            <WrapperBestSeller>
-              <TextBestSeller>best seller</TextBestSeller>
-            </WrapperBestSeller>
-            <ImgProduct
-              src="/images/landmarks.png"
-              alt="product"
-            ></ImgProduct>
-            <ButtonCart>add to cart</ButtonCart>
-            <WrapperText>
-              <TextCategory>people</TextCategory>
-              <TextProduct>red bench</TextProduct>
-              <TextPrice>&#36;3.89</TextPrice>
-            </WrapperText>
-          </CardProduct>
-          <CardProduct>
-            <ImgProduct src="/images/landmarks.png" alt="product" />
-            <ButtonCart>add to cart</ButtonCart>
-            <WrapperText>
-              <TextCategory>people</TextCategory>
-              <TextProduct>red bench</TextProduct>
-              <TextPrice>&#36;3.89</TextPrice>
-            </WrapperText>
-          </CardProduct>
-          <CardProduct>
-            <ImgProduct src="/images/landmarks.png" alt="product" />
-            <ButtonCart>add to cart</ButtonCart>
-            <WrapperText>
-              <TextCategory>people</TextCategory>
-              <TextProduct>red bench</TextProduct>
-              <TextPrice>&#36;3.89</TextPrice>
-            </WrapperText>
-          </CardProduct>
-        </GridProducts>
-
-      </Row>
+                    <WrapperText>
+                      <TextCategory>{product.category}</TextCategory>
+                      <TextProduct>{product.name}</TextProduct>
+                      <TextPrice>&#36;{product.price}</TextPrice>
+                    </WrapperText>
+                  </CardProduct>
+                );
+              })}
+            </GridProducts>
+          </Row>
+        </>
+      )}
     </>
   );
 };

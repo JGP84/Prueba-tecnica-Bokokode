@@ -29,11 +29,14 @@ const Header = () => {
   const { featuredProduct,  data, dataFilter, loading, error, reFetch, getFeaturedProduct } = useFetch()
 
   let productFeatured;
+  let productsPeopleAlsoBuy;
 
   if ( data ) { 
    
     productFeatured = getFeaturedProduct()[0]
-    console.log('product.name', productFeatured)
+    productsPeopleAlsoBuy = productFeatured.people_also_buy;
+    console.log('productFeatured', productFeatured)
+    console.log('dataFilter', dataFilter)
   }
 
   
@@ -68,8 +71,7 @@ const Header = () => {
           { productFeatured.description }
           </TextDescription>
           <TextDescriptionFooter>
-            text to mockup various fonts for a type specimen book.So how did the
-            classical Latin become so incoherent? According to McClintock.
+          { productFeatured.description }
           </TextDescriptionFooter>
         </WrapperDescriptionFeatured>
 
@@ -77,32 +79,16 @@ const Header = () => {
           <TitlePeople>People also buy</TitlePeople>
 
           <Row>
-            <CardProduct>
-              <Img src={ productFeatured.people_also_buy[0].image.src} />
+          { productsPeopleAlsoBuy.map ( (product )=>{
+            return <CardProduct>
+              <Img src={ product.image.src} alt={ product.image.alt }/>
               <WrapperText>
-                <TextCategory>{ productFeatured.people_also_buy[0].category}</TextCategory>
-                <TextProduct>{ productFeatured.people_also_buy[0].name}</TextProduct>
-                <TextPrice>&#36;{ productFeatured.people_also_buy[0].price}</TextPrice>
+                <TextCategory>{ product.category}</TextCategory>
+                <TextProduct>{ product.name}</TextProduct>
+                <TextPrice>&#36;{ product.price}</TextPrice>
               </WrapperText>
             </CardProduct>
-
-            <CardProduct>
-              <Img src="/images/yellow-wall.png" />
-              <WrapperText>
-                <TextCategory>people</TextCategory>
-                <TextProduct>red bench</TextProduct>
-                <TextPrice>&#36;3.89</TextPrice>
-              </WrapperText>
-            </CardProduct>
-
-            <CardProduct>
-              <Img src="/images/yellow-wall.png" />
-              <WrapperText>
-                <TextCategory>people</TextCategory>
-                <TextProduct>red bench</TextProduct>
-                <TextPrice>&#36;3.89</TextPrice>
-              </WrapperText>
-            </CardProduct>
+          }) }
           </Row>
         </Column>
       </ContainerFlex>

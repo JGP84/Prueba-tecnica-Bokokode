@@ -221,13 +221,14 @@ export const Img = styled.img`
   }
 `;
 export const WrapperText = styled.div`
-  width: 283.02px;
+  width: 117px;
   height: 22%;
   display: flex;
   flex-direction: column;
   justify-content: space-space-evenly;
   align-items: flex-start;
   gap: 8px;
+  
 
   ${responsive.mobile} {
   }

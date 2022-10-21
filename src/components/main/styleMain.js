@@ -76,7 +76,7 @@ export const GridProducts = styled.div`
   /* grid-template-columns: repeat(auto-fill, minmax( 200px, auto)); */
  /*  grid-template-columns: repeat(auto-fill, minmax( 200px, 1fr)); */
   /* grid-template-rows: repeat(2, 514px);  */
-  grid-auto-rows: 514px;
+  grid-auto-rows: auto;
   column-gap: 48px;
   row-gap: 52.55px;
 
@@ -90,7 +90,7 @@ export const GridProducts = styled.div`
 
 export const CardProduct = styled.div`
   width: 283.02px;
-  height: 514px;
+  height: auto;
   /* background-color: green; */
   color: white;
   font-size: 32px;
