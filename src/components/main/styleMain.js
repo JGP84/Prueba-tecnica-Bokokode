@@ -9,11 +9,10 @@ export const WrapperHeader = styled.div`
   margin-top: 70px;
   margin-bottom: 70px;
 
-  ${responsive.mobile}{
+  ${responsive.mobile} {
     margin-top: 220px;
-  margin-bottom: 120px;
+    margin-bottom: 120px;
   }
-
 `;
 export const WrapperTitleCategory = styled.div``;
 
@@ -25,7 +24,7 @@ export const TitleCategory = styled.text`
   line-height: 33px;
   color: #000000;
 
-  ${responsive.mobile}{
+  ${responsive.mobile} {
     font-size: 60px;
   }
 `;
@@ -39,8 +38,8 @@ export const TitleSorts = styled.text`
   line-height: 24px;
   color: #000000;
 
-  ${responsive.mobile}{
-    display:none;
+  ${responsive.mobile} {
+    display: none;
   }
 `;
 
@@ -49,19 +48,17 @@ export const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: 97px;
-  /*  background: blue; */
 `;
 
 export const ColumnCheckboxes = styled.div`
   display: flex;
   flex-direction: column;
-  background: red;
+  background: cyan;
   width: 300px;
 
-  ${responsive.mobile}{
-    display:none;
+  ${responsive.mobile} {
+    display: none;
   }
- 
 `;
 export const WrapperCheckbox = styled.div`
   max-width: 327px;
@@ -77,9 +74,8 @@ export const GridProducts = styled.div`
   column-gap: 48px;
   row-gap: 52.55px;
 
-  ${responsive.mobile}{
+  ${responsive.mobile} {
     grid-template-columns: 1fr;
-    
   }
 `;
 
@@ -92,10 +88,8 @@ export const CardProduct = styled.div`
   flex-direction: column;
   align-items: flex-center;
 
-  ${responsive.mobile}{
- 
-  width: 100%;
-  
+  ${responsive.mobile} {
+    width: 100%;
   }
 `;
 export const ButtonCart = styled.button`
@@ -112,29 +106,23 @@ export const ButtonCart = styled.button`
   text-transform: uppercase;
   color: #ffffff;
 
-  ${responsive.mobile}{
-   
+  ${responsive.mobile} {
     width: 100%;
     font-size: 70px;
     height: 166px;
-  
   }
 `;
 
 export const ImgProduct = styled.img`
   height: 400px;
-  
 
-  ${responsive.mobile}{
-   
+  ${responsive.mobile} {
     height: 1550px;
     object-fit: cover;
-  
   }
 `;
 export const WrapperText = styled.div`
   width: 283.02px;
-  /* height: 115,98px; */
   height: 22%;
   display: flex;
   flex-direction: column;
@@ -162,7 +150,7 @@ export const TextCategory = styled.text`
   ${responsive.mobile} {
     font-size: 75px;
     margin-top: 62px;
-  margin-bottom: 36px;
+    margin-bottom: 36px;
   }
 `;
 

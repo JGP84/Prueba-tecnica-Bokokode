@@ -26,78 +26,68 @@ import {
 import useFetch from "../../hooks/useFetch";
 
 const Header = () => {
-
-  const { featuredProduct,  data, dataFilter, loading, error, reFetch, getFeaturedProduct } = useFetch()
+  const { data, loading, getFeaturedProduct } = useFetch();
 
   let productFeatured;
   let productsPeopleAlsoBuy;
 
-  if ( data ) { 
-   
-    productFeatured = getFeaturedProduct()[0]
+  if (data) {
+    productFeatured = getFeaturedProduct()[0];
     productsPeopleAlsoBuy = productFeatured.people_also_buy;
-    console.log('productFeatured', productFeatured)
-    console.log('dataFilter', dataFilter)
   }
-
-  
-
-
 
   return (
     <>
-    { loading ? 
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <WrapperSection>
+          {/* Start Grid */}
+          <Grid>
+            <TitleHeader> {productFeatured.name}</TitleHeader>
+            <Button>add to cart</Button>
+            <ImgFeaturedProduct
+              src={productFeatured.image.src}
+              alt={productFeatured.image.alt}
+            />
+          </Grid>
+          <ContainerTitlePhotoDay>
+            <TitlePhoto>Photo of the day</TitlePhoto>
+          </ContainerTitlePhotoDay>
 
-    <h1>Loading...</h1> :
+          {/* End grid */}
 
-    <WrapperSection>
-      {/* Start Grid */}
-      <Grid>
-        <TitleHeader> { productFeatured.name }</TitleHeader>
-        <Button>add to cart</Button>
-        <ImgFeaturedProduct src={ productFeatured.image.src }
-        alt={ productFeatured.image.alt } />
-      </Grid>
-      <ContainerTitlePhotoDay>
-        <TitlePhoto>Photo of the day</TitlePhoto>
-      </ContainerTitlePhotoDay>
+          <ContainerFlex>
+            <WrapperDescriptionFeatured>
+              <TitleDescription>{`About the ${productFeatured.name}`}</TitleDescription>
+              <SubTitle>{productFeatured.category}</SubTitle>
+              <TextDescription>{productFeatured.description}</TextDescription>
+              <TextDescriptionFooter>
+                {productFeatured.description}
+              </TextDescriptionFooter>
+            </WrapperDescriptionFeatured>
 
-      {/* End grid */}
+            <Column>
+              <TitlePeople>People also buy</TitlePeople>
 
-      <ContainerFlex>
-        <WrapperDescriptionFeatured>
-          <TitleDescription>{`About the ${ productFeatured.name }` }</TitleDescription>
-          <SubTitle>{ productFeatured.category }</SubTitle>
-          <TextDescription>
-          { productFeatured.description }
-          </TextDescription>
-          <TextDescriptionFooter>
-          { productFeatured.description }
-          </TextDescriptionFooter>
-        </WrapperDescriptionFeatured>
-
-        <Column>
-          <TitlePeople>People also buy</TitlePeople>
-
-          <Row>
-          { productsPeopleAlsoBuy.map ( (product )=>{
-            return <CardProduct>
-              <Img src={ product.image.src} alt={ product.image.alt }/>
-              <WrapperText>
-                <TextCategory>{ product.category}</TextCategory>
-                <TextProduct>{ product.name}</TextProduct>
-                <TextPrice>&#36;{ product.price}</TextPrice>
-              </WrapperText>
-            </CardProduct>
-          }) }
-          </Row>
-        </Column>
-      </ContainerFlex>
-    </WrapperSection>
-    }
-
-    
-
+              <Row>
+                {productsPeopleAlsoBuy.map((product) => {
+                  return (
+                    <CardProduct>
+                      <Img src={product.image.src} alt={product.image.alt} />
+                      <WrapperText>
+                        <TextCategory>{product.category}</TextCategory>
+                        <TextProduct>{product.name}</TextProduct>
+                        <TextPrice>&#36;{product.price}</TextPrice>
+                      </WrapperText>
+                    </CardProduct>
+                  );
+                })}
+              </Row>
+            </Column>
+          </ContainerFlex>
+        </WrapperSection>
+      )}
     </>
   );
 };

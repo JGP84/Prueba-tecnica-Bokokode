@@ -8,14 +8,6 @@ function useFetch(url) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  /* let dataBody = JSON.stringify({
-    "sort": {
-      "key": "price",
-      "type": "ASC"
-    }, 
-    "categories": [ "pets" ]
-  }); */
-
   let config = {
     method: "post",
     url: "https://technical-frontend-api.bokokode.com/api/products",
@@ -40,8 +32,6 @@ function useFetch(url) {
   };
 
   useEffect(() => {
-    
-
     /* Data */
     axios(config)
       .then((response) => {
@@ -68,8 +58,6 @@ function useFetch(url) {
   }, [url]);
 
   const reFetch = () => {
-    
-
     axios(config)
       .then((response) => {
         setData(response.data);
@@ -90,9 +78,15 @@ function useFetch(url) {
     return result;
   };
 
- 
-
-  return { data, dataFilter, loading, error, reFetch, featuredProduct, getFeaturedProduct };
+  return {
+    data,
+    dataFilter,
+    loading,
+    error,
+    reFetch,
+    featuredProduct,
+    getFeaturedProduct,
+  };
 }
 
 export default useFetch;

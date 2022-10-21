@@ -92,7 +92,7 @@ const Main = () => {
                       alt={product.image.alt}
                     />
 
-                   {/*  <ButtonCart>add to cart</ButtonCart> */}
+                    {/*  <ButtonCart>add to cart</ButtonCart> */}
 
                     <WrapperText>
                       <TextCategory>{product.category}</TextCategory>
