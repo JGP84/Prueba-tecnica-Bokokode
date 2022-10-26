@@ -54,7 +54,7 @@ export const BadgeCart = styled.div`
   }
 `;
 
-export const NumberBadget = styled.text`
+export const NumberBadget = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;

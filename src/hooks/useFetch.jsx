@@ -6,6 +6,7 @@ function useFetch(url) {
   const [featuredProduct, setFeaturedProduct] = useState(null);
   const [dataFilter, setDataFilter] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [loadingFilter, setLoadingFilter] = useState(true);
   const [error, setError] = useState(null);
 
   let config = {
@@ -53,7 +54,7 @@ function useFetch(url) {
         setError(err);
       })
       .finally(() => {
-        setLoading(false);
+        setLoadingFilter(false);
       });
   }, [url]);
 
@@ -82,6 +83,7 @@ function useFetch(url) {
     data,
     dataFilter,
     loading,
+    loadingFilter,
     error,
     reFetch,
     featuredProduct,

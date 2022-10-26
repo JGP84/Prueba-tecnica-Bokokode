@@ -26,12 +26,13 @@ import {
 import useFetch from "../../hooks/useFetch";
 
 const Header = () => {
-  const { data, loading, getFeaturedProduct } = useFetch();
 
-  let productFeatured;
-  let productsPeopleAlsoBuy;
+  const { loading, getFeaturedProduct } = useFetch();
 
-  if (data) {
+  let productFeatured = null;
+  let productsPeopleAlsoBuy = null;
+
+  if (loading === false) {
     productFeatured = getFeaturedProduct()[0];
     productsPeopleAlsoBuy = productFeatured.people_also_buy;
   }
@@ -73,7 +74,7 @@ const Header = () => {
               <Row>
                 {productsPeopleAlsoBuy.map((product) => {
                   return (
-                    <CardProduct>
+                    <CardProduct key={product._id}>
                       <Img src={product.image.src} alt={product.image.alt} />
                       <WrapperText>
                         <TextCategory>{product.category}</TextCategory>

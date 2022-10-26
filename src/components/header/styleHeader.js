@@ -23,7 +23,7 @@ export const WrapperSection = styled.div`
  }
 `;
 
-export const TitleHeader = styled.text`
+export const TitleHeader = styled.h1`
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -108,7 +108,7 @@ export const WrapperDescriptionFeatured = styled.div`
     margin-top: 60px;
   }
 `;
-export const TitlePhoto = styled.text`
+export const TitlePhoto = styled.h3`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -126,7 +126,7 @@ export const TitlePhoto = styled.text`
   }
 `;
 
-export const TitleDescription = styled.text`
+export const TitleDescription = styled.h3`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -144,7 +144,7 @@ export const TitleDescription = styled.text`
   }
 `;
 
-export const TitlePeople = styled.text`
+export const TitlePeople = styled.h3`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -160,7 +160,7 @@ export const TitlePeople = styled.text`
   }
 `;
 
-export const SubTitle = styled.text`
+export const SubTitle = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -175,7 +175,7 @@ export const SubTitle = styled.text`
     display: none;
   }
 `;
-export const TextDescription = styled.text`
+export const TextDescription = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
@@ -187,7 +187,7 @@ export const TextDescription = styled.text`
     font-size: 60px;
   }
 `;
-export const TextDescriptionFooter = styled.text`
+export const TextDescriptionFooter = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
@@ -271,7 +271,7 @@ export const WrapperText = styled.div`
   ${responsive.mobile} {
   }
 `;
-export const TextCategory = styled.text`
+export const TextCategory = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -285,7 +285,7 @@ export const TextCategory = styled.text`
   }
 `;
 
-export const TextProduct = styled.text`
+export const TextProduct = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -297,7 +297,7 @@ export const TextProduct = styled.text`
     font-size: 57px;
   }
 `;
-export const TextPrice = styled.text`
+export const TextPrice = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;

@@ -16,7 +16,7 @@ export const WrapperHeader = styled.div`
 `;
 export const WrapperTitleCategory = styled.div``;
 
-export const TitleCategory = styled.text`
+export const TitleCategory = styled.h2`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -30,7 +30,7 @@ export const TitleCategory = styled.text`
 `;
 export const WrapperSortProducts = styled.div``;
 
-export const TitleSorts = styled.text`
+export const TitleSorts = styled.h3`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
@@ -138,7 +138,7 @@ export const WrapperText = styled.div`
 
   /* background: red; */
 `;
-export const TextCategory = styled.text`
+export const TextCategory = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -154,7 +154,7 @@ export const TextCategory = styled.text`
   }
 `;
 
-export const TextProduct = styled.text`
+export const TextProduct = styled.h2`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
@@ -168,7 +168,7 @@ export const TextProduct = styled.text`
     margin-bottom: 40px;
   }
 `;
-export const TextPrice = styled.text`
+export const TextPrice = styled.h3`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
@@ -194,7 +194,7 @@ export const WrapperBestSeller = styled.div`
 
   background: #ffffff;
 `;
-export const TextBestSeller = styled.text`
+export const TextBestSeller = styled.h4`
   font-family: "Archivo";
   font-style: normal;
   font-weight: 400;

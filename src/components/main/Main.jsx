@@ -25,17 +25,18 @@ import useFetch from "../../hooks/useFetch";
 const Main = () => {
   const [value, setCheckbox] = useState(true);
 
-  const { dataFilter, loading } = useFetch();
+  const { dataFilter, loadingFilter } = useFetch();
 
-  let products;
+  let products= null;
 
   if (dataFilter) {
     products = dataFilter.data.data;
+    /* console.log('products', products) */
   }
 
   return (
     <>
-      {loading ? (
+      {loadingFilter ? (
         <h1>Loading...</h1>
       ) : (
         <>
@@ -86,7 +87,7 @@ const Main = () => {
             <GridProducts>
               {products.map((product) => {
                 return (
-                  <CardProduct>
+                  <CardProduct key={product._id}>
                     <ImgProduct
                       src={product.image.src}
                       alt={product.image.alt}
