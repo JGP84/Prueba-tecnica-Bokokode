@@ -61,9 +61,9 @@ export const ColumnCheckboxes = styled.div`
   }
 `;
 export const WrapperCheckbox = styled.div`
-  max-width: 327px;
-  display: flex;
-  flex-direction: column;
+ /*  max-width: 327px; */
+ /*  display: flex;
+  flex-direction: column; */
   background: yellow;
 `;
 

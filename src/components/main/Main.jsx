@@ -21,6 +21,7 @@ import {
 } from "./styleMain";
 import Checkbox from "./Checkbox";
 import useFetch from "../../hooks/useFetch";
+import CheckboxCategory from "./CheckboxCategory";
 
 const Main = () => {
   const [value, setCheckbox] = useState(true);
@@ -54,34 +55,13 @@ const Main = () => {
 
           <Row>
             <ColumnCheckboxes>
-              {/* <Checkbox>
             
-          </Checkbox> */}
-              {/* <WrapperCheckbox>
-            <input
-              type="checkbox"
-              id="coding"
-              name="interest"
-              value="coding"
-              checked
-            ></input>
-          </WrapperCheckbox> */}
-              <WrapperCheckbox>
-                <Checkbox
-                  label="value"
-                  value={value}
-                  checked={value}
-                  onChange={({ target }) => setCheckbox(!value)}
-                />
-              </WrapperCheckbox>
 
-              {/*  <Checkbox
-              label="value"
-              value={value}
-              checked={value}
-              onChange={({ target }) => setCheckbox(!value)}
-            /> */}
-              {/* <Checkbox>1</Checkbox> */}
+              
+                <CheckboxCategory></CheckboxCategory>
+              
+             
+
             </ColumnCheckboxes>
 
             <GridProducts>

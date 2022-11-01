@@ -8,10 +8,10 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Navbar />
+        {/* <Navbar />
         <Line />
         <Header />
-        <Line />
+        <Line /> */}
         <Main />
       </Container>
     </>
